@@ -8,8 +8,9 @@ $ pip install tqdm colorama
 ```bash
 $ python run.py
 ```
-## 사용법
+### `사용법`
 기본적으로 alldebrid 에서 지원하는 호스트 도메인의 다운로드 링크를 입력하면 자동으로 링크를 생성하고 다운로드를 시작
+
 반드시
 
 ## Special Directories
