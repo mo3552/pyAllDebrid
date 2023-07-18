@@ -34,14 +34,14 @@ while True:
         urllib.parse.quote('MY PASSWORD')
 
     try:
-        response = urllib.request.urlopen(apiEndpoint)
+        response = urllib.request.urlopen(apiEndpointWithPassword)
         if response.status == 400:
-            print("잘못된 요청입니다. 다른 링크를 입력하세요.")
+            print("잘못된 요청입니다. 다른 링크를 입력하세요.\n")
             continue
 
         data = response.read().decode('utf-8')
         response = json.loads(data)
-
+        print(response)
         # response download file
         download_url = response['data']['link']
         file_name = response['data']['filename']  # 다운로드 받을 파일 이름과 확장자
@@ -71,4 +71,5 @@ while True:
     except urllib.error.URLError as e:
         print(Fore.RED + f"URL 오류가 발생했습니다: {e.reason}\n" + Fore.RESET)
     except Exception as e:
-        print(Fore.RED + f"링크에 파일이 없거나 존재 하지 않는 링크입니다.\n" + Fore.RESET)
+        print(
+            Fore.RED + f"링크에 파일이 없거나 존재 하지 않는 링크입니다.{str(e)}\n" + Fore.RESET)

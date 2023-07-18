@@ -91,3 +91,8 @@ sw.*
 
 android/
 .tooling
+
+# pyinstaller
+build
+*.ico
+*.spec
