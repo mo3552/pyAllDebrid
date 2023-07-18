@@ -1,2 +1,3 @@
 # pyAllDebrid
-AllDebrid downloader
+https://alldebrid.com 링크 다운로더
+## 
