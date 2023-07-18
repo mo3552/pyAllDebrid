@@ -1,0 +1,2 @@
+# pyAllDebrid
+AllDebrid downloader
