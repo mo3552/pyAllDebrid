@@ -41,7 +41,7 @@ while True:
 
         data = response.read().decode('utf-8')
         response = json.loads(data)
-        print(response)
+
         # response download file
         download_url = response['data']['link']
         file_name = response['data']['filename']  # 다운로드 받을 파일 이름과 확장자
